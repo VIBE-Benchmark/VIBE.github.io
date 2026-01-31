@@ -679,7 +679,7 @@ The Causal Level views visual instructions as catalysts that encode underlying p
 <section class="leaderboard-section">
   <div class="container is-max-widescreen">
     <div class="leaderboard-card">
-      <h2 class="leaderboard-title">VIBE Leaderboard</h2>
+      <h2 class="leaderboard-title" style="font-weight: bold; color: #0b63f6;">VIBE Leaderboard</h2>
       <div class="leaderboard-table-wrap">
         <table class="leaderboard-table">
           <thead>
@@ -1022,77 +1022,7 @@ The Causal Level views visual instructions as catalysts that encode underlying p
 </section>
 <!-- End Leaderboard -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            While Multimodal Large Language Models (MLLMs) excel at visual understanding, they often struggle in complex scenarios that require visual planning and imagination. 
-            Inspired by how humans use sketching as a form of visual thinking to develop and communicate ideas, we introduce <span class="hl-blue bold">Latent Sketchpad, a framework that equips MLLMs with an internal visual scratchpad</span>.
-            The internal visual representations of MLLMs have traditionally been confined to perceptual understanding.
-            We repurpose them to support generative visual thought without compromising reasoning ability.
-            <span class="hl-blue bold">Building on frontier MLLMs, our approach integrates visual generation directly into their native autoregressive reasoning process.</span>
-            It allows the model to interleave textual reasoning with the generation of visual latents. 
-            These latents guide the internal thought process and can be translated into sketch images for interpretability. 
-            To realize this, we introduce two components: a Context-Aware Vision Head autoregressively produces visual representations, and a pretrained Sketch Decoder renders these into human-interpretable images.
-            We evaluate the framework on our new dataset MazePlanning, where experiments across various MLLMs show that Latent Sketchpad delivers comparable or even superior reasoning performance.
-            It further generalizes across distinct pretrained backbones, including Gemma3 and Qwen2.5-VL.
-            By extending model's textual reasoning to visual thinking, our framework opens new opportunities for richer human–computer interaction and broader applications in areas such as education and design.
-            <!-- While Multimodal Large Language Models (MLLMs) excel at visual understanding, they often struggle in complex scenarios that require visual planning and imagination. 
-            Inspired by how humans use sketching as a form of visual thinking to develop and communicate ideas, we introduce <span class="hl-blue bold">Latent Sketchpad, a framework that equips MLLMs with an internal visual scratchpad</span>.
-            Our approach <span class="hl-blue bold">integrates visual thinking directly into the MLLM's native generation process.</span> 
-            It allows the model to interleave textual reasoning with the generation of visual latents. These latents act as abstract sketches that guide its internal thought process.  
-            This is enabled by two lightweight components. A Context-Aware Vision Head autoregressively produces visual representations, while a pretrained Sketch Decoder renders these into human-interpretable images.
-            Unlike prior methods that depend on external tools, Latent Sketchpad generates visual representations autonomously within the model. 
-            To evaluate our framework, we introduce MazePlanning, a new dataset featuring complex, interleaved reasoning trajectories. 
-            <span class="hl-blue bold">Experiments across diverse MLLMs, including Qwen2.5-VL and Gemma3, demonstrate the broad applicability of our method.</span>
-            Latent Sketchpad repurposes the internal visual representations of MLLMs, which are traditionally used only for understanding, to support generative visual thought. 
-            This unlocks new reasoning capabilities that extend far beyond language alone.
-            By externalizing the model's thought process, our framework creates opportunities for richer human-computer interaction, and broader applications across domains such as education and design. -->
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
 
-<!-- Video carousel -->
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h2 class="title is-3">Showcase of Latent Sketchpad on MazePlanning</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/maze_showcase1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/maze_showcase2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/maze_showcase3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
 
 
 <!-- Image showcase -->
@@ -1101,50 +1031,65 @@ The Causal Level views visual instructions as catalysts that encode underlying p
 
     <!-- 卡片1 -->
     <div class="image-card box">
-      <h3 class="title is-4 has-text-centered">Architecture of the Context-Aware Vision Head and Pretrained Sketch Decoder.</h3> <!-- 小标题 -->
+      <h3 class="title is-4 has-text-centered">Synergy Between Textual and Visual Instructions</h3> <!-- 小标题 -->
       <figure class="image">
-        <img src="static/images/model_architecture.png" alt="MY ALT TEXT"/>
+        <img src="static/images/instruction.png" alt="MY ALT TEXT"/>
       </figure>
       <p class="subtitle is-5 has-text-left mt-3">
-        The Vision Head transforms hidden states from the MLLM backbone into visual latents. The Sketch Decoder operates independently, converting these latents into sketch-style images for visualization and interpretability.
+        Two representative cases illustrating how textual and visual instructions interact. The first case shows that visual instructions can resolve target ambiguity that detailed text alone fails to address. The second case demonstrates that complex semantic constraints require the joint use of detailed textual and visual instructions. Together, these examples highlight that textual and visual instructions play distinct yet complementary roles in image editing.
       </p>
     </div>
 
     <!-- 卡片2 -->
     <div class="image-card box">
-      <h3 class="title is-4 has-text-centered">Illustration of Generalization and Compatibility of the Pretrained Sketch Decoder</h3> <!-- 小标题 -->
+      <h3 class="title is-4 has-text-centered">Performance across image styles on the Deictic Level.</h3> <!-- 小标题 -->
       <figure class="image">
-        <img src="static/images/visualizer.png" alt="MY ALT TEXT"/>
+        <img src="static/images/style.png" alt="MY ALT TEXT"/>
       </figure>
       <p class="subtitle is-5 has-text-left mt-3">
-        (a) Quantitative reconstruction results (SSIM) across different vision encoders (OpenCLIP, Qwen2.5-VL and Gemma3) on unseen samples from MazePlanning dataset. 
+        Left: Average Deictic Level scores across real-world, animation, and sketch images for four proprietary models.
         <br>
-        (b) Qualitative examples of reconstructed sketches from visual latents produced by each encoder.
+        Right: Metric-level heatmaps for Seedream~4.5 and GPT-Image-1, illustrating style-dependent variations in Instruction Adherence, Contextual Preservation, and Visual Coherence. 
       </p>
     </div>
 
     <!-- 卡片3 -->
     <div class="image-card box">
-      <h3 class="title is-4 has-text-centered">Visualizations from Latent Sketchpad-enhanced Gemma3 and Qwen2.5-VL</h3> <!-- 小标题 -->
+      <h3 class="title is-4 has-text-centered">Qualitative examples of multi-task visual instruction following.</h3> <!-- 小标题 -->
       <figure class="image">
-        <img src="static/images/task_visualization.png" alt="MY ALT TEXT"/>
+        <img src="static/images/multi-task.png" alt="MY ALT TEXT"/>
       </figure>
     </div>
 
-    <!-- 卡片4 -->
-    <div class="image-card box">
-      <h3 class="title is-4 has-text-centered">Performance Variation with Maze Size</h3> <!-- 小标题 -->
-      <figure class="image">
-        <img src="static/images/performance_size.png" alt="MY ALT TEXT"/>
-      </figure>
-    </div>
 
   </div>
 </section>
 <!-- End image showcase -->
 
 
-
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent generative models have achieved remarkable progress in image editing. 
+  However, existing systems and benchmarks remain largely text-guided.
+  In contrast, human communication is inherently multimodal, where visual instructions such as sketches efficiently convey spatial and structural intent.
+  To address this gap, we introduce VIBE, the Visual Instruction Benchmark for Image Editing with a three-level interaction hierarchy that captures deictic grounding, morphological manipulation, and causal reasoning.
+  Across these levels, we curate high-quality and diverse test cases that reflect progressively increasing complexity in visual instruction following.
+  We further propose a robust LMM-as-a-judge evaluation framework with task-specific metrics to enable scalable and fine-grained assessment.
+  Through a comprehensive evaluation of 17 representative open-source and proprietary image editing models, we find that proprietary models exhibit early-stage visual instruction-following capabilities and consistently outperform open-source models. 
+  However, performance degrades markedly with increasing task difficulty even for the strongest systems, highlighting promising directions for future research.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
 
 
 <!--BibTex citation -->
@@ -1171,7 +1116,7 @@ The Causal Level views visual instructions as catalysts that encode underlying p
         <div class="content">
 
           <p>
-            © 2025 Latent Sketchpad Authors ·
+            © 2025 VIBE Authors ·
             <a href="https://github.com/hwanyu112/Latent-Sketchpad" target="_blank">Code</a> ·
             <a href="mailto:huanyu.zhang@cripac.ia.ac.cn">Contact</a> · <br>
             Licensed under
