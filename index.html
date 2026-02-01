@@ -106,7 +106,7 @@
       overflow: hidden;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
       cursor: pointer;
       background: white;
       margin-bottom: 20px;
@@ -114,10 +114,15 @@
       display: inline-block;
       width: 100%;
     }
+
+    .gallery-grid:hover .gallery-item:not(:hover) {
+      opacity: 0.4;
+      filter: brightness(0.5) blur(1px);
+    }
     
     .gallery-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
       overflow: visible;
       z-index: 5000;
     }
